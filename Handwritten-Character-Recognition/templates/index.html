@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handwritten Character Recognition</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">MNIST CNN Demo</p>
+        <h1>Handwritten Character Recognition</h1>
+        <p class="description">
+          Draw a digit from 0 to 9 and let a trained TensorFlow model classify it.
+        </p>
+      </div>
+
+      <label class="theme-toggle" for="themeToggle">
+        <span>Light</span>
+        <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="switch"></span>
+        <span>Dark</span>
+      </label>
+    </header>
+
+    <section class="workspace">
+      <section class="panel draw-panel" aria-labelledby="drawTitle">
+        <div class="panel-heading">
+          <div>
+            <h2 id="drawTitle">Draw Digit</h2>
+            <p>Use a mouse, trackpad, or touch screen.</p>
+          </div>
+          {% if model_accuracy %}
+          <span class="accuracy-pill">Test accuracy {{ model_accuracy }}</span>
+          {% else %}
+          <span class="accuracy-pill muted">Train model first</span>
+          {% endif %}
+        </div>
+
+        <div class="canvas-frame">
+          <canvas id="drawingCanvas" width="280" height="280" aria-label="Drawing canvas"></canvas>
+        </div>
+
+        <div class="actions">
+          <button class="btn primary" id="predictBtn" type="button">Predict</button>
+          <button class="btn secondary" id="clearBtn" type="button">Clear</button>
+        </div>
+
+        <p class="status-message" id="statusMessage" role="status"></p>
+      </section>
+
+      <section class="panel result-panel" aria-labelledby="resultTitle">
+        <div class="panel-heading">
+          <div>
+            <h2 id="resultTitle">Prediction</h2>
+            <p>Confidence and digit probabilities appear here.</p>
+          </div>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-stat">
+            <span class="label">Predicted Digit</span>
+            <strong id="digitResult">-</strong>
+          </div>
+          <div class="result-stat">
+            <span class="label">Confidence</span>
+            <strong id="confidenceResult">-</strong>
+          </div>
+        </div>
+
+        <div class="preview-area">
+          <div>
+            <span class="label">Processed 28x28 Image</span>
+            <div class="processed-preview">
+              <img id="processedImage" alt="Processed digit preview">
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <span class="label">Probabilities</span>
+          <div class="probability-chart" id="probabilityChart"></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='canvas.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

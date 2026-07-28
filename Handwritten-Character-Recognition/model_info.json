@@ -1,0 +1,8 @@
+{
+  "epochs": 5,
+  "batch_size": 128,
+  "training_accuracy": 0.9905185103416443,
+  "validation_accuracy": 0.9906666874885559,
+  "test_accuracy": 0.9890000224113464,
+  "test_loss": 0.035014718770980835
+}
