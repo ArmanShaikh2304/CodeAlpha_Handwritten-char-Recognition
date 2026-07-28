@@ -1,92 +1,135 @@
-# Handwritten Character Recognition
+# ✍️ Handwritten Character Recognition
 
-A beginner-friendly Flask web app that recognizes handwritten digits from 0 to 9 using a TensorFlow/Keras CNN trained on the MNIST dataset.
+A beginner-friendly **Flask + TensorFlow** web application that recognizes **handwritten digits (0–9)** using a **Convolutional Neural Network (CNN)** trained on the **MNIST dataset**. Draw a digit directly in your browser and get an instant prediction with confidence scores and visual insights.
 
-## Features
+---
 
-- Draw a digit in the browser.
-- Predict the digit with a trained CNN model.
-- Show the predicted digit and confidence score.
-- Display the preprocessed 28x28 image.
-- Show a probability bar chart for all digits.
-- Toggle between light and dark mode.
-- Display saved model test accuracy after training.
+## 📸 Preview
 
-## Project Structure
+> **Draw → Predict → View Confidence → Analyze Results**
 
-```text
-Handwritten-Character-Recognition/
-|-- app.py
-|-- train_model.py
-|-- model.h5
-|-- model_info.json
-|-- requirements.txt
-|-- README.md
-|-- templates/
-|   `-- index.html
-|-- static/
-|   |-- style.css
-|   |-- script.js
-|   `-- canvas.js
-`-- uploads/
-    `-- .gitkeep
-```
+*(Add screenshots or a GIF here after uploading your project.)*
 
-`model.h5` and `model_info.json` are created when you run the training script.
+---
 
-## Setup
+## ✨ Features
 
-Create and activate a virtual environment if you want to keep dependencies isolated.
+- 🎨 Draw handwritten digits directly on the browser canvas
+- 🤖 Real-time digit prediction using a trained CNN model
+- 📊 Displays confidence score for the predicted digit
+- 📈 Probability chart showing confidence for all digits (0–9)
+- 🖼️ Shows the processed 28×28 grayscale image sent to the model
+- 🌗 Light/Dark mode toggle
+- 🎯 Displays the model's test accuracy after training
+- ⚡ Fast and responsive Flask interface
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-```
+---
 
-Install the required packages.
+## 🧠 Model Information
 
-```bash
-pip install -r requirements.txt
-```
+| Property | Value |
+|----------|--------|
+| Model | Convolutional Neural Network (CNN) |
+| Dataset | MNIST |
+| Classes | 10 (Digits 0–9) |
+| Input Size | 28 × 28 Pixels |
+| Framework | TensorFlow / Keras |
+| Backend | Flask |
 
-Train the CNN model on MNIST.
+---
 
-```bash
-python train_model.py
-```
-
-Start the Flask app.
-
-```bash
-python app.py
-```
-
-If your system uses `python3` instead of `python`, run `python3 train_model.py` and `python3 app.py`.
-
-Open this URL in your browser:
+## 🚀 Workflow
 
 ```text
-http://127.0.0.1:5000
+Draw Digit
+     │
+     ▼
+Canvas Image
+     │
+     ▼
+Image Preprocessing
+(Grayscale + Resize + Normalize)
+     │
+     ▼
+CNN Prediction
+     │
+     ▼
+Prediction + Confidence + Probability Chart
 ```
 
-## How It Works
+---
 
-1. `train_model.py` loads the MNIST dataset from TensorFlow/Keras.
-2. Pixel values are normalized from `0-255` to `0-1`.
-3. A simple CNN is trained with Conv2D, MaxPooling2D, Flatten, Dense, and Softmax layers.
-4. The trained model is saved as `model.h5`.
-5. `app.py` loads `model.h5` and serves the web interface.
-6. The browser sends the canvas image to `/predict`.
-7. Flask converts the image to grayscale, resizes it to 28x28, normalizes it, and sends it to the model.
-8. The app returns the predicted digit, confidence score, preprocessed image, and all digit probabilities.
+## ⚙️ Technologies Used
 
-## Routes
+- Python
+- Flask
+- TensorFlow
+- Keras
+- NumPy
+- OpenCV
+- HTML5
+- CSS3
+- JavaScript
 
-- `/` renders the homepage.
-- `/predict` accepts a drawn image and returns the prediction as JSON.
+---
 
-## Notes
+## 📊 Output
 
-- The canvas uses white strokes on a black background to match MNIST images.
-- If the app says `model.h5 was not found`, run `python train_model.py` first.
-- No login, database, or upload storage is required.
+The application provides:
+
+- ✅ Predicted Digit
+- ✅ Prediction Confidence
+- ✅ Probability Distribution for Digits (0–9)
+- ✅ Processed 28×28 Image
+- ✅ Model Test Accuracy
+
+---
+
+## 🎯 Future Improvements
+
+- 🔤 Alphabet Recognition (A–Z)
+- ✍️ Full Handwritten Word Recognition
+- 📱 Mobile-Friendly Drawing Canvas
+- 📂 Image Upload Support
+- 🌍 Multi-language Character Recognition
+- 📈 Training History Visualization
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are always welcome.
+
+If you'd like to improve this project:
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
+
+It motivates and helps others discover the project!
+
+---
+
+## 👨‍💻 Author
+
+**Arman Shaikh**
+
+Computer Science Engineering Student  
+Passionate about AI, Machine Learning, Web Development, and Open Source.
+
+---
+
+<div align="center">
+
+### ⭐ Thanks for Visiting ⭐
+
+Made using **Flask**, **TensorFlow**, and **Python**
+
+</div>
