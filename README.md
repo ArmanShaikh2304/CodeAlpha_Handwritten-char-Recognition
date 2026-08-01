@@ -121,7 +121,7 @@ It motivates and helps others discover the project!
 
 **Arman Shaikh**
 
-Computer Science Engineering Student  
+Computer Science Engineering Student     
 Passionate about AI, Machine Learning, Web Development, and Open Source.
 
 ---
