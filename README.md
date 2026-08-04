@@ -130,6 +130,6 @@ Passionate about AI, Machine Learning, Web Development, and Open Source.
 
 ### ⭐ Thanks for Visiting ⭐
 
-Made using **Flask**, **TensorFlow**, and **Python**
+Made using **Flask**, **TensorFlow**, and **Python**  
 
 </div>
