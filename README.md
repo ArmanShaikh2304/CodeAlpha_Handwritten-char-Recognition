@@ -4,8 +4,7 @@ A beginner-friendly **Flask + TensorFlow** web application that recognizes **han
 
 ---
 
-## 📸 Preview
-
+## 📸 Preview  
 > **Draw → Predict → View Confidence → Analyze Results**
 
 *(Add screenshots or a GIF here after uploading your project.)*
