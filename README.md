@@ -16,7 +16,7 @@ A beginner-friendly **Flask + TensorFlow** web application that recognizes **han
 - 🎨 Draw handwritten digits directly on the browser canvas     
 - 🤖 Real-time digit prediction using a trained CNN model
 - 📊 Displays confidence score for the predicted digit
-- 📈 Probability chart showing confidence for all digits (0–9)
+- 📈 Probability chart showing confidence for all digits (0–9) 
 - 🖼️ Shows the processed 28×28 grayscale image sent to the model
 - 🌗 Light/Dark mode toggle
 - 🎯 Displays the model's test accuracy after training
