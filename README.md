@@ -114,7 +114,7 @@ If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
 
 It motivates and helps others discover the project!
 
----
+---  
 
 ## 👨‍💻 Author
 
