@@ -19,7 +19,7 @@ A beginner-friendly **Flask + TensorFlow** web application that recognizes **han
 - 📈 Probability chart showing confidence for all digits (0–9) 
 - 🖼️ Shows the processed 28×28 grayscale image sent to the model
 - 🌗 Light/Dark mode toggle
-- 🎯 Displays the model's test accuracy after training
+- 🎯 Displays the model's test accuracy after training 
 - ⚡ Fast and responsive Flask interface
 
 ---
