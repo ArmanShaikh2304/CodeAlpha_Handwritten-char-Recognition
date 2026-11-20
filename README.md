@@ -79,7 +79,7 @@ The application provides:
 - ✅ Predicted Digit
 - ✅ Prediction Confidence
 - ✅ Probability Distribution for Digits (0–9)
-- ✅ Processed 28×28 Image
+- ✅ Processed 28×28 Image 
 - ✅ Model Test Accuracy
 
 ---
